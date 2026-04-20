@@ -6,7 +6,7 @@ public class LevelDataController : MonoBehaviour
 {
     public List<ItemBaseCtrl> listItem;
 
-    private void Start()
+    public void Init()
     {
         // thực hiện khởi tạo các giá trị ban đầu cho item
         foreach (var item in listItem)

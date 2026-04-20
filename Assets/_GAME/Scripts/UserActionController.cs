@@ -43,6 +43,7 @@ public class UserActionController : MonoBehaviour
                 if (itemSelected.IsSuccess()) continue;
                 _curItemSelected = itemSelected;
                 _deltaPos = _curItemSelected.transform.position - rayCastPos;
+                _curItemSelected.SetSelected(true);
                 break;
             }
         }
@@ -51,7 +52,8 @@ public class UserActionController : MonoBehaviour
     private void HandleMoveItem()
     {
         var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        var newObjPos = new Vector3(mousePos.x, mousePos.y, -3f);
+        var posZ = _curItemSelected.successPos.z;
+        var newObjPos = new Vector3(mousePos.x, mousePos.y, posZ);
         _curItemSelected.transform.position = newObjPos + _deltaPos;
     }
 
@@ -61,6 +63,7 @@ public class UserActionController : MonoBehaviour
         var curPos = _curItemSelected.transform.position;
         var posZ = _curItemSelected.successPos.z;
         _curItemSelected.transform.position = new Vector3(curPos.x, curPos.y, posZ);
+        _curItemSelected.SetSelected(false);
         _curItemSelected.CheckCanSuccess();
         _curItemSelected = null;
     }

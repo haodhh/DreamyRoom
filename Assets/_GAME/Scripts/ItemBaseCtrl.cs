@@ -4,11 +4,17 @@ namespace _GAME.Scripts
 {
     public class ItemBaseCtrl : MonoBehaviour
     {
+        public SpriteRenderer sprt;
         public Vector3 successPos;
         public bool isSuccess;
 
         public void Init()
         {
+            // thực hiện lấy lại reference của component
+            sprt = GetComponent<SpriteRenderer>();
+            // thực hiện ưu tiên hiển thị các item chưa đúng lên trên
+            sprt.sortingOrder = 1;
+
             successPos = transform.position;
             isSuccess = false;
         }
@@ -19,6 +25,13 @@ namespace _GAME.Scripts
             var posY = Random.Range(-5, 5);
             var posZ = successPos.z;
             transform.position = new Vector3(posX, posY, posZ);
+        }
+
+        public void SetSelected(bool selected)
+        {
+            if (selected)
+                sprt.sortingOrder = 2;
+            else sprt.sortingOrder = 1;
         }
 
         public bool IsSuccess()
@@ -34,7 +47,9 @@ namespace _GAME.Scripts
             {
                 transform.position = successPos;
                 isSuccess = true;
-                
+
+                sprt.sortingOrder = 0;
+
                 Debug.Log("Item is success!");
             }
         }
