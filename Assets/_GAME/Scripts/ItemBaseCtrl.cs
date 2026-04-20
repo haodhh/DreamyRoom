@@ -16,7 +16,7 @@ namespace _GAME.Scripts
         {
             index = newIndex;
             // thực hiện lấy lại reference của component
-            sprt = GetComponent<SpriteRenderer>();
+            sprt ??= GetComponent<SpriteRenderer>();
             // thực hiện ưu tiên hiển thị các item chưa đúng lên trên
             sprt.sortingOrder = 1;
 
