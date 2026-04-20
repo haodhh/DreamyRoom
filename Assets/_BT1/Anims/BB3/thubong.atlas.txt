@@ -1,0 +1,98 @@
+thubong.png
+	size: 684, 524
+	filter: Linear, Linear
+	pma: true
+No-Lx
+	bounds: 599, 164, 49, 75
+	offsets: 1, 1, 51, 77
+	rotate: 90
+body
+	bounds: 2, 2, 237, 163
+	offsets: 1, 1, 239, 164
+bom
+	bounds: 2, 167, 288, 120
+	offsets: 1, 1, 290, 122
+ear
+	bounds: 555, 31, 102, 131
+	offsets: 1, 1, 104, 133
+ear-L
+	bounds: 587, 419, 100, 83
+	offsets: 1, 1, 102, 85
+	rotate: 90
+ear-R
+	bounds: 492, 403, 116, 93
+	rotate: 90
+eye
+	bounds: 447, 13, 36, 35
+	offsets: 1, 1, 38, 37
+eye-L
+	bounds: 292, 267, 6, 6
+	offsets: 1, 1, 8, 8
+eye-Lfade
+	bounds: 292, 275, 11, 12
+	offsets: 1, 1, 13, 14
+eye-c
+	bounds: 659, 138, 24, 22
+	offsets: 1, 1, 26, 24
+	rotate: 90
+eye-slot
+	bounds: 401, 8, 44, 40
+	offsets: 1, 1, 46, 42
+eyex
+	bounds: 485, 17, 36, 31
+	offsets: 1, 5, 38, 37
+face
+	bounds: 305, 294, 225, 185
+	offsets: 1, 1, 227, 187
+	rotate: 90
+hand1
+	bounds: 492, 316, 100, 85
+	offsets: 1, 1, 102, 87
+hand2
+	bounds: 241, 74, 91, 59
+	offsets: 1, 1, 93, 61
+	rotate: 90
+head-back
+	bounds: 305, 164, 292, 128
+	offsets: 1, 1, 294, 130
+head-long
+	bounds: 2, 289, 301, 230
+	offsets: 1, 1, 303, 232
+ma-hong-1
+	bounds: 631, 405, 28, 12
+	offsets: 1, 1, 30, 14
+ma-hong-2
+	bounds: 492, 302, 27, 12
+	offsets: 1, 1, 29, 14
+mom1
+	bounds: 613, 404, 16, 13
+	offsets: 1, 1, 18, 15
+mom2
+	bounds: 523, 2, 46, 24
+	rotate: 90
+mom3
+	bounds: 587, 403, 24, 14
+no-L
+	bounds: 291, 2, 46, 53
+	offsets: 1, 1, 49, 55
+	rotate: 90
+no-R
+	bounds: 594, 303, 98, 77
+	offsets: 1, 1, 100, 79
+	rotate: 90
+no-R-1
+	bounds: 346, 3, 53, 45
+	offsets: 1, 1, 55, 47
+no-R-2
+	bounds: 241, 7, 48, 65
+	offsets: 1, 1, 50, 67
+nose
+	bounds: 549, 4, 29, 25
+	offsets: 1, 1, 31, 27
+shadow
+	bounds: 302, 50, 251, 112
+	offsets: 1, 1, 253, 114
+tim
+	bounds: 599, 215, 86, 72
+	offsets: 1, 1, 88, 74
+	rotate: 90

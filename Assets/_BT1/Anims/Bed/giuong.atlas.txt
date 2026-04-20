@@ -1,0 +1,29 @@
+giuong.png
+	size: 1044, 932
+	filter: Linear, Linear
+	pma: true
+	scale: 0.8
+eye
+	bounds: 979, 536, 27, 54
+	offsets: 0, 0, 34, 54
+eye_close
+	bounds: 979, 592, 55, 36
+	rotate: 90
+giuong-copy
+	bounds: 2, 2, 975, 927
+ma-hong-1
+	bounds: 979, 786, 77, 48
+	offsets: 0, 0, 77, 49
+	rotate: 90
+ma-hong-2
+	bounds: 979, 710, 74, 50
+	rotate: 90
+mom
+	bounds: 979, 649, 59, 43
+	rotate: 90
+mom2
+	bounds: 979, 865, 62, 64
+	offsets: 9, 8, 71, 72
+nose
+	bounds: 979, 496, 38, 35
+	rotate: 90
