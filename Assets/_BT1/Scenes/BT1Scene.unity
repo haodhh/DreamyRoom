@@ -133,9 +133,9 @@ GameObject:
   - component: {fileID: 247495173}
   - component: {fileID: 247495172}
   - component: {fileID: 247495171}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: anh_polaroi
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -350,9 +350,9 @@ GameObject:
   - component: {fileID: 673977626}
   - component: {fileID: 673977625}
   - component: {fileID: 673977624}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: blanket
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -598,9 +598,9 @@ GameObject:
   - component: {fileID: 1518607038}
   - component: {fileID: 1518607037}
   - component: {fileID: 1518607036}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: book3
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -771,9 +771,9 @@ GameObject:
   - component: {fileID: 1839466069}
   - component: {fileID: 1839466068}
   - component: {fileID: 1839466067}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bang_ghim
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -917,9 +917,9 @@ GameObject:
   - component: {fileID: 1842680590}
   - component: {fileID: 1842680589}
   - component: {fileID: 1842680588}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: box1
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1159,9 +1159,9 @@ GameObject:
   - component: {fileID: 2083776149}
   - component: {fileID: 2083776148}
   - component: {fileID: 2083776147}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: book9
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -34,10 +34,10 @@ public class UserActionController : MonoBehaviour
     {
         var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         var rayCastPos = new Vector3(mousePos.x, mousePos.y, 0);
-        var rayCastHits = Physics2D.RaycastAll(rayCastPos, Vector2.zero, Mathf.Infinity, LayerMask.GetMask("Default"));
+        var rayCastHits = Physics2D.RaycastAll(rayCastPos, Vector2.zero, Mathf.Infinity, LayerMask.GetMask("Gameplay"));
         foreach (var hit in rayCastHits)
         {
-            if (hit.collider != null)
+            if (hit.collider != null && hit.collider.tag.Equals("Item"))
             {
                 _curObjSelected = hit.collider.gameObject;
                 break;
