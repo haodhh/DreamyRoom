@@ -9,8 +9,8 @@ public class LevelDataController : MonoBehaviour
     public void Init()
     {
         // thực hiện khởi tạo các giá trị ban đầu cho item
-        foreach (var item in listItem)
-            item.Init();
+        for (var i = 0; i < listItem.Count; i++)
+            listItem[i].Init(i);
 
         // thực hiện set vị trí ngẫu nhiên cho item khi vào đầu level
         foreach (var item in listItem)

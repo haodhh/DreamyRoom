@@ -252,8 +252,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65508c91f9b4f7fb51313f10a9b3c99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
+  sprt: {fileID: 0}
   successPos: {x: 0, y: 0, z: 0}
   isSuccess: 0
+  parent: {fileID: 4370868361077179537}
+  sameItems:
+  - {fileID: 3197349151158501839}
 --- !u!1 &937719596086268889
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,8 +438,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65508c91f9b4f7fb51313f10a9b3c99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
+  sprt: {fileID: 0}
   successPos: {x: 0, y: 0, z: 0}
   isSuccess: 0
+  parent: {fileID: 0}
+  sameItems: []
 --- !u!1 &3812048654160504389
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,8 +641,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65508c91f9b4f7fb51313f10a9b3c99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
+  sprt: {fileID: 0}
   successPos: {x: 0, y: 0, z: 0}
   isSuccess: 0
+  parent: {fileID: 2219568597655987496}
+  sameItems: []
 --- !u!1 &5723445873607618149
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,8 +977,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65508c91f9b4f7fb51313f10a9b3c99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
+  sprt: {fileID: 0}
   successPos: {x: 0, y: 0, z: 0}
   isSuccess: 0
+  parent: {fileID: 0}
+  sameItems: []
 --- !u!1 &6558968215722322911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,8 +1200,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65508c91f9b4f7fb51313f10a9b3c99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
+  sprt: {fileID: 0}
   successPos: {x: 0, y: 0, z: 0}
   isSuccess: 0
+  parent: {fileID: 4370868361077179537}
+  sameItems: []
 --- !u!1 &7674137928578663639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,8 +1465,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65508c91f9b4f7fb51313f10a9b3c99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
+  sprt: {fileID: 0}
   successPos: {x: 0, y: 0, z: 0}
   isSuccess: 0
+  parent: {fileID: 357625610533291277}
+  sameItems: []
 --- !u!1 &8506322755958282192
 GameObject:
   m_ObjectHideFlags: 0
@@ -1676,8 +1701,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65508c91f9b4f7fb51313f10a9b3c99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
+  sprt: {fileID: 0}
   successPos: {x: 0, y: 0, z: 0}
   isSuccess: 0
+  parent: {fileID: 0}
+  sameItems: []
 --- !u!1 &8871690380161335130
 GameObject:
   m_ObjectHideFlags: 0
@@ -1691,7 +1720,7 @@ GameObject:
   - component: {fileID: 8218514210805650588}
   - component: {fileID: 3197349151158501839}
   m_Layer: 3
-  m_Name: pillow3 (1)
+  m_Name: pillow3
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1846,5 +1875,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65508c91f9b4f7fb51313f10a9b3c99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
+  sprt: {fileID: 0}
   successPos: {x: 0, y: 0, z: 0}
   isSuccess: 0
+  parent: {fileID: 4370868361077179537}
+  sameItems:
+  - {fileID: 8399426311628443807}
