@@ -46,12 +46,15 @@ public class LevelDataController : MonoBehaviour
         return true;
     }
 
+#if UNITY_EDITOR
+
     [ContextMenu("AutoReference")]
     public void AutoReference()
     {
         AutoReferenceParent();
         AutoReferenceSameItem();
         AutoReferenceOther();
+        UnityEditor.EditorUtility.SetDirty(this);
     }
 
     private void AutoReferenceParent()
@@ -134,4 +137,6 @@ public class LevelDataController : MonoBehaviour
             item.isSuccess = false;
         }
     }
+
+#endif
 }
