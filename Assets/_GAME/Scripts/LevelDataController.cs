@@ -1,24 +1,49 @@
 using System.Collections.Generic;
 using _GAME.Scripts;
+using DG.Tweening;
 using UnityEngine;
 
 public class LevelDataController : MonoBehaviour
 {
     public List<ItemBaseCtrl> listItem;
+    private int _itemSpawnCounter = 0;
 
     public void Init()
     {
-        // giá trị đã được init bằng AutoReference
-        // // thực hiện khởi tạo các giá trị ban đầu cho item
-        // for (var i = 0; i < listItem.Count; i++)
-        //     listItem[i].Init(i);
-
-        // thực hiện set vị trí ngẫu nhiên cho item khi vào đầu level
+        _itemSpawnCounter = 0;
         foreach (var item in listItem)
         {
-            item.transform.SetParent(transform);
-            item.RandomPos();
+            item.Init();
+            item.gameObject.SetActive(false);
         }
+    }
+
+    public bool SpawnItem()
+    {
+        // hết item để spawn thì bỏ qua
+        if (_itemSpawnCounter >= listItem.Count) return false;
+
+        // lấy ra item tiếp theo cần spawn
+        var nextItem = listItem[_itemSpawnCounter];
+        // set trạng thái ban đầu cho item
+        nextItem.transform.SetParent(transform);
+        nextItem.gameObject.SetActive(true);
+
+        // set vị trí ban đầu của item là vị trí của box
+        nextItem.transform.position = GameplayController.Instance.boxAnim.transform.position;
+        // tìm vị trí ngẫu nhiên cho item sẽ di chuyển đến
+        var posX = Random.Range(-5, 5);
+        var posY = Random.Range(-5, 5);
+        var posZ = nextItem.successPos.z;
+        var randPos = new Vector3(posX, posY, posZ);
+        // cho item nhảy đến vị trí đã random
+        nextItem.transform.DOJump(randPos, 2f, 1, 0.5f)
+            .SetEase(Ease.OutQuad)
+            // khi item nhảy đến vị trí random thì cho item lơ lửng
+            .OnComplete(() => nextItem.PlayAnimationActive());
+
+        _itemSpawnCounter++;
+        return true;
     }
 
     [ContextMenu("AutoReference")]

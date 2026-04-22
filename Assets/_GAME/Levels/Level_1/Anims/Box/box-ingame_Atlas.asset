@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: box-ingame_Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: b53bd4ee067defa46bb2de3ed3cebb8e, type: 3}
+  atlasFile: {fileID: 4900000, guid: 52187fcba5182e74d9d6dbad08b55898, type: 3}
   materials:
-  - {fileID: 2100000, guid: 92e40eb0ec8d1c442ba88656e9216e3c, type: 2}
+  - {fileID: 2100000, guid: 3902963c378343846a1bff15af5a6ba4, type: 2}

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 namespace _GAME.Scripts
@@ -12,31 +13,25 @@ namespace _GAME.Scripts
         public ItemBaseCtrl parent;
         public List<ItemBaseCtrl> sameItems;
 
-        public void Init(int newIndex)
+        public void Init()
         {
-            index = newIndex;
-            // thực hiện lấy lại reference của component
-            sprt ??= GetComponent<SpriteRenderer>();
-            // thực hiện ưu tiên hiển thị các item chưa đúng lên trên
-            sprt.sortingOrder = 1;
-
-            successPos = transform.position;
             isSuccess = false;
-        }
-
-        public void RandomPos()
-        {
-            var posX = Random.Range(-5, 5);
-            var posY = Random.Range(-5, 5);
-            var posZ = successPos.z;
-            transform.position = new Vector3(posX, posY, posZ);
         }
 
         public void SetSelected(bool selected)
         {
             if (selected)
+            {
                 sprt.sortingOrder = 2;
-            else sprt.sortingOrder = 1;
+                // khi đang được người chơi cầm lên để di chuyển thì sẽ để item nằm im và di chuyển theo tay thôi
+                ClearAnimation();
+            }
+            else
+            {
+                sprt.sortingOrder = 1;
+                // khi item được thả ra thì đặt lại trạng thái lơ lửng
+                PlayAnimationActive();
+            }
         }
 
         public bool IsSuccess()
@@ -55,12 +50,12 @@ namespace _GAME.Scripts
 
             // kiểm tra khoảng cách giữa vị trí hiện tại và vị trí đúng
             // ở vị trí gần đúng thì set về vị trí đúng
-            if (Vector3.Distance(transform.position, successPos) < 0.35f)
+            if (Vector3.Distance(transform.position, successPos) < 0.5f)
             {
-                transform.position = successPos;
+                transform.DOMove(successPos, 0.25f);
                 isSuccess = true;
-
                 sprt.sortingOrder = 0;
+                ClearAnimation();
 
                 Debug.Log("Item is success!");
             }
@@ -75,12 +70,14 @@ namespace _GAME.Scripts
             // kiểm tra với từng same item
             foreach (var sameItem in sameItems)
             {
-                if (Vector3.Distance(transform.position, sameItem.successPos) < 0.35f)
+                if (Vector3.Distance(transform.position, sameItem.successPos) < 0.5f)
                 {
                     // nếu ở gần vị trí đúng của same item thì move nó về vị trí đúng
-                    transform.position = sameItem.successPos;
+                    transform.DOMove(sameItem.successPos, 0.25f);
                     isSuccess = true;
                     sprt.sortingOrder = 0;
+                    ClearAnimation();
+
                     // và tráo đổi lại vị trí đúng của 2 item với nhau
                     sameItem.successPos = successPos;
                     // và xóa liên kết của 2 item để tránh same item có thể đặt lại vị trí vừa mất
@@ -103,6 +100,41 @@ namespace _GAME.Scripts
                     return;
                 }
             }
+        }
+
+        private List<Tweener> _animActive = new();
+        private void ClearAnimation()
+        {
+            foreach (var tweener in _animActive)
+            {
+                tweener.Complete();
+                tweener.Kill();
+            }
+            // chỉnh góc xoay của item về ban đầu
+            transform.DORotateQuaternion(Quaternion.Euler(0, 0, 0), 0.1f);
+        }
+
+        public void PlayAnimationActive()
+        {
+            ClearAnimation();
+
+            var moveHeight = 0.3f; // độ cao lên xuống
+            var moveDuration = 1f; // thời gian 1 nhịp sóng
+            var tiltAngle = 10f; // góc nghiêng
+            var tiltDuration = 3.5f;
+
+            // di chuyển lên xuống
+            var anim1 = transform.DOMoveY(transform.position.y + moveHeight, moveDuration)
+                .SetEase(Ease.InOutSine)
+                .SetLoops(-1, LoopType.Yoyo);
+
+            // nghiêng qua lại
+            var anim2 = transform.DORotate(new Vector3(0, 0, tiltAngle), tiltDuration)
+                .SetEase(Ease.InOutSine)
+                .SetLoops(-1, LoopType.Yoyo);
+
+            _animActive.Add(anim1);
+            _animActive.Add(anim2);
         }
     }
 }

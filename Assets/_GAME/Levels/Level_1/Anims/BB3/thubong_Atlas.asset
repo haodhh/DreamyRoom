@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: thubong_Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: 8d221d1ab51ab914c946fd964a96ac1f, type: 3}
+  atlasFile: {fileID: 4900000, guid: 6f459dc868bf81e43845e7b6532deee0, type: 3}
   materials:
-  - {fileID: 2100000, guid: 3536feb354b6d9b4c92afe59a5929487, type: 2}
+  - {fileID: 2100000, guid: 8c3cfa5ba97aede4880d15818cf4f1d3, type: 2}
